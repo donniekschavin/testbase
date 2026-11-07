@@ -6,6 +6,7 @@ runs of the next --hours from your entry, built from the coin's own 5-minute
 candles, plus the same entry, stop and target on every past day at the same
 time of day.
 
+    python3 timemachine.py run                           # the plan in crypto/plan.json (/crypto-exit)
     python3 timemachine.py run --product BTC-USD --stop-pct 1.5 --target-r 2
     python3 timemachine.py run --product SOL-USD --entry 90.02 --stop 88.50 --target 93.06
     python3 timemachine.py run --product ETH-USD --stop-pct 2 --hours 8 --fee-pct 1.2 --write
@@ -391,7 +392,28 @@ def resolve(a, bars, entry_t):
     return entry, stop, target
 
 
+def from_plan(a):
+    """No --product: take the pair, entry, stop, target, time and hours from crypto/plan.json."""
+    try:
+        with open(os.path.join(a.out, "plan.json")) as f:
+            plan = json.load(f)
+    except FileNotFoundError:
+        raise SystemExit("timemachine.py: give --product, or write a plan first with /crypto-exit")
+    a.product = plan["product"]
+    for k in ("entry", "stop", "target"):
+        if getattr(a, k) is None:
+            setattr(a, k, plan[k])
+    if not a.at and plan.get("entry_time"):
+        a.at = plan["entry_time"].replace(" UTC", "")
+    if a.hours_given is None:
+        a.hours = plan.get("hold_hours", a.hours)
+    if not a.fee_pct and plan.get("fee_pct"):
+        a.fee_pct = plan["fee_pct"]
+
+
 def cmd_run(a):
+    if not a.product:
+        from_plan(a)
     pid = a.product.upper()
     now = int(time.time())
     at = parse_at(a.at)
@@ -443,13 +465,13 @@ def main(argv=None):
     p = argparse.ArgumentParser(description="Crypto Time Machine (Coinbase public data).")
     sub = p.add_subparsers(dest="cmd", required=True)
     s = sub.add_parser("run")
-    s.add_argument("--product", required=True, help="Coinbase pair, e.g. BTC-USD")
+    s.add_argument("--product", help="Coinbase pair, e.g. BTC-USD (default: crypto/plan.json)")
     s.add_argument("--entry", type=float, help="entry price (default: the last 5-minute close)")
     s.add_argument("--stop", type=float, help="stop price")
     s.add_argument("--stop-pct", type=float, help="stop N %% below the entry")
     s.add_argument("--target", type=float, help="target price")
     s.add_argument("--target-r", type=float, default=2.0, help="target in R when no --target (default 2)")
-    s.add_argument("--hours", type=float, default=24, help="how long a replay runs (default 24)")
+    s.add_argument("--hours", type=float, dest="hours_given", help="how long a replay runs (default 24)")
     s.add_argument("--at", help="entry time 'YYYY-MM-DD HH:MM' UTC (default: the last completed bar)")
     s.add_argument("--days", type=int, default=60)
     s.add_argument("--replays", type=int, default=10000)
@@ -461,6 +483,7 @@ def main(argv=None):
     s.add_argument("--write", action="store_true", help="save crypto/timemachine.json")
     s.add_argument("--json", action="store_true")
     a = p.parse_args(argv)
+    a.hours = a.hours_given if a.hours_given is not None else 24.0
     return cmd_run(a)
 
 

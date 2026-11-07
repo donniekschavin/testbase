@@ -95,8 +95,16 @@ before today's `--session` it uses yesterday's.
 3. Intraday: `scan.py orb`, with the session the user cares about. Say how
    many usable charts broke their range and when; a later hit is closer to
    the price now.
-4. The user picks one chart and hands it to `/crypto-timemachine` with an
-   entry, a stop and a target. Never pick for them.
+4. The user picks one chart. Hand it on: `/crypto-news PAIR` (what is moving
+   it), then `/crypto-entry PAIR` (the entry bar by bar). Never pick for them.
+
+The whole crypto chain, one trade:
+
+```
+crypto-scanner -> crypto-news -> crypto-entry -> crypto-exit -> crypto-timemachine
+  -> crypto-budget -> crypto-risk -> crypto-broker (buy, then protect = the stop)
+crypto-alerts: stop, target, hold-until (while it is open)
+```
 
 ## Rules
 
@@ -111,7 +119,7 @@ before today's `--session` it uses yesterday's.
 It never places, sizes or checks an order, never says which coin to buy,
 never calls the data real time, and never promises that a setup works. The
 stock pack's `/trader-risk` and `/trader-broker` block crypto on purpose;
-this skill does not change that.
+crypto orders go through `/crypto-risk` and `/crypto-broker` only.
 
 ## Safety
 

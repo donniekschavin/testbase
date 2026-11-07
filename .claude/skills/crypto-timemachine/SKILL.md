@@ -89,10 +89,11 @@ why.
 - Say what data it used: the days, the source and the time range (UTC).
 - Never call the odds a prediction or a promise, and never say "buy".
 - If the user gives no fee, say the result ignores fees.
-- Hand off: this pack has no crypto sizing, risk check or order step yet. The
-  stock pack's `/trader-budget`, `/trader-risk` and `/trader-broker` do not
-  handle crypto (risk blocks it on purpose). Do not route a crypto order
-  through them.
+- With no flags it reads `crypto/plan.json` from `/crypto-exit` (pair,
+  entry, stop, target, entry time, hold hours and fee).
+- Hand off to `/crypto-budget`, then `/crypto-risk` and `/crypto-broker`.
+  Never route a crypto order through the stock pack's `/trader-budget`,
+  `/trader-risk` or `/trader-broker`: they block crypto on purpose.
 
 ## Safety
 
