@@ -1,0 +1,33 @@
+{
+  "brand": "TIPS REELS",
+  "headline": "Reels-mu *sepi* penonton?",
+  "total_label": "TOTAL   4 kesalahan",
+  "total_new_label": "4 perbaikan",
+  "keyword": "REELS",
+  "labels": {"left": "SALAH", "right": "BENAR", "vs_title": "*Salah* vs *Benar*"},
+  "captions": {
+    "hook": "Reels-mu sepi? Mungkin karena *empat* hal ini.",
+    "twist": "Padahal semuanya bisa *diperbaiki* hari ini.",
+    "summary": "Empat perbaikan, Reels-mu ditonton *sampai habis*.",
+    "cta": "Mau checklist lengkapnya? Komen [REELS]."
+  },
+  "summary_total": "siap posting",
+  "items": [
+    {"name": "Hook", "icon": "bolt", "tile_old": "6 dtk", "old": "6 detik",
+     "old_note": "\"Halo semuanya, hari ini...\"",
+     "fix": "Langsung ke inti di kalimat pertama", "new": "2 detik",
+     "say_fix": "Gantinya, langsung ke *inti* di *2 detik* pertama."},
+    {"name": "Durasi", "icon": "clock", "tile_old": "90 dtk", "old": "90 detik",
+     "old_note": "satu video, tiga ide",
+     "fix": "Satu ide per video", "tile_new": "15-45 dtk", "new": "15-45 dtk",
+     "say_fix": "Satu ide saja, cukup *15 sampai 45 detik*."},
+    {"name": "Subtitle", "icon": "cc", "tile_old": "tanpa", "old": "Tanpa teks",
+     "old_note": "banyak yang nonton tanpa suara",
+     "fix": "Teks di layar dan subtitle", "tile_new": "ada", "new": "Ada teks",
+     "say_fix": "Pasang *subtitle*, banyak orang nonton tanpa suara."},
+    {"name": "Hashtag", "icon": "hash", "tile_old": "30 tag", "old": "30 tag",
+     "old_note": "sekarang sudah tidak bisa",
+     "fix": "Maksimal 5 tag yang spesifik", "tile_new": "maks 5", "new": "Maks 5",
+     "say_fix": "Hashtag *maksimal 5*, aturan Instagram sejak Desember 2025."}
+  ]
+}

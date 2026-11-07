@@ -1,0 +1,13 @@
+{
+  "_catatan": "SEMUA ANGKA DAN HACK DI BAWAH MASIH CONTOH. Ganti dengan angka dan hack aslimu sebelum posting.",
+  "brand": "LIFE HACK HARIAN",
+  "app": "[NAMA APLIKASI]",
+  "keyword": "HACK",
+  "list_size": 5,
+  "items": [
+    {"name": "Snooze alarm", "icon": "alarm", "old": 20, "new": 0, "hack": "Taruh HP di seberang kamar"},
+    {"name": "Cari kunci",   "icon": "key",   "old": 8,  "new": 0, "hack": "Gantung kunci di dekat pintu"},
+    {"name": "Pilih baju",   "icon": "shirt", "old": 7,  "new": 1, "hack": "Siapkan baju dari malam"},
+    {"name": "Scroll HP",    "icon": "phone", "old": 5,  "new": 0, "hack": "Mode fokus sampai jam 8"}
+  ]
+}
