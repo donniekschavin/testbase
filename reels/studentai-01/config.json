@@ -1,0 +1,43 @@
+{
+  "brand": "StudentAi",
+  "avatar": "robot",
+  "theme": {
+    "accent": [255, 79, 154], "bg_top": [255, 250, 214], "bg_bot": [255, 255, 250], "blob": [0, 10, 60],
+    "navy": [17, 17, 17], "ink": [30, 30, 30], "muted": [125, 125, 125],
+    "tiles": [[240, 240, 80], [255, 255, 255], [255, 228, 240], [255, 255, 255]]
+  },
+  "headline": "Stop ketik *\"buatkan makalah\"*",
+  "total_label": "PROMPT   cuma 1 baris",
+  "total_new_label": "4 prompt spesifik",
+  "keyword": "PROMPT",
+  "labels": {"left": "PROMPT ASAL", "right": "PROMPT BENAR", "vs_title": "*Asal* vs *Benar*"},
+  "captions": {
+    "hook": "Stop ketik *\"buatkan makalah\"*. Pakai [4 prompt] ini.",
+    "twist": "Jawaban AI-mu nggak bakal *generik* lagi.",
+    "summary": "4 prompt, tugas kelar *lebih cepat*.",
+    "cta": "Mau teks lengkap 4 prompt-nya? Komen [PROMPT]."
+  },
+  "summary_total": "tugas kelar",
+  "items": [
+    {"name": "Ringkas", "icon": "doc", "tile_old": "umum", "tile_new": "5 poin",
+     "old": "\"ringkas ini\"", "old_note": "hasilnya panjang dan umum",
+     "fix": "Ringkas jadi 5 poin + 3 istilah penting", "new": "5 poin",
+     "say_round": "[Pertama,] ringkas materi.",
+     "say_fix": "Minta *5 poin* plus *3 istilah* penting."},
+    {"name": "Makalah", "icon": "pen", "tile_old": "ketahuan", "tile_new": "kerangka",
+     "old": "\"buatkan makalah\"", "old_note": "bukan tulisanmu, gampang ketahuan",
+     "fix": "Buat kerangka 5 bagian, isinya aku tulis", "new": "Kerangka",
+     "say_round": "[Kedua,] makalah.",
+     "say_fix": "Minta *kerangkanya* dulu. Isinya tetap kamu yang tulis."},
+    {"name": "Materi susah", "icon": "book", "tile_old": "bingung", "tile_new": "+3 soal",
+     "old": "\"jelaskan X\"", "old_note": "malah makin bingung",
+     "fix": "Jelaskan kayak ke anak SMP + 3 soal latihan", "new": "+3 soal",
+     "say_round": "[Ketiga,] materi susah.",
+     "say_fix": "Suruh jelasin kayak ke *anak SMP*, plus *3 soal* latihan."},
+    {"name": "Cek tulisan", "icon": "check", "tile_old": "berubah", "tile_new": "aman",
+     "old": "\"perbaiki\"", "old_note": "isinya ikut diubah",
+     "fix": "Cek ejaan saja, jangan ubah isinya", "new": "0 diubah",
+     "say_round": "[Keempat,] cek tulisan.",
+     "say_fix": "Minta cek *ejaan* aja, *0 kalimat* diubah."}
+  ]
+}
