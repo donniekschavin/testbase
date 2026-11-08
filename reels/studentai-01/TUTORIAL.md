@@ -36,27 +36,44 @@ menyambung mulus saat diputar ulang.
 
 ---
 
-## 2. Caption TikTok
+## 2. Deskripsi + tagar TikTok
 
 ```
-Komen PROMPT, aku balas dengan teks lengkap 4 prompt AI-nya.
+Prompt ChatGPT buat tugas kuliah: stop ketik "buatkan makalah". Komen PROMPT, aku kirim 4 prompt lengkapnya.
 
-Prompt AI satu baris bikin jawaban generik. Empat prompt ini buat ringkas materi, bikin kerangka makalah, paham materi susah, dan cek ejaan tanpa mengubah isi tulisanmu.
+4 prompt AI buat ringkas materi, bikin kerangka makalah, paham materi susah, dan cek ejaan tanpa mengubah isi tulisanmu. Bisa dipakai di ChatGPT, Gemini, atau AI lain.
 
-Isinya tetap kamu yang nulis. AI bantu biar tugas kuliah kelar lebih cepat.
-
-#promptai #tugaskuliah #belajarpakaiai #studentai
+#promptai #chatgptindonesia #tugaskuliah #tipskuliah #studentai
 ```
 
-Kata yang dicari orang ("prompt AI", "tugas kuliah", "ringkas materi") ada
-di caption sebagai kalimat biasa. TikTok membaca teks caption untuk pencarian.
+- **Kata kunci utama "prompt ChatGPT buat tugas kuliah"** ada di 80 karakter
+  pertama. Itu bagian yang paling dibaca mesin pencari TikTok.
+- **5 tagar, semuanya relevan.** Tidak pakai #fyp atau #viral, karena tidak
+  memengaruhi For You Page.
+- **Cek tiap tagar sebelum dipakai:** cari di TikTok, lihat apakah video
+  teratasnya mirip videomu. Kalau isinya spam atau tidak nyambung, ganti dengan
+  cadangan: #belajarpakaiai #mahasiswa #aiuntukbelajar #promptchatgpt
+
+### Komentar yang dipin (deskripsi kedua)
+
+Batas komentar TikTok sekitar 150 karakter, jadi isinya kata kunci saja:
+
+```
+Prompt AI buat tugas kuliah: ringkas materi, kerangka makalah, materi susah, cek ejaan. Komen PROMPT 👇
+```
 
 ---
 
-## 3. Yang dikirim ke orang yang komen PROMPT
+## 3. Cara mengirim 4 prompt lengkap ke yang komen
 
-Balas komentarnya, atau pin satu komentar berisi teks ini. TikTok tidak punya
-fitur balas DM otomatis dari komentar seperti Instagram, jadi balas manual.
+Teks 4 prompt di bawah terlalu panjang untuk balasan komentar (batas sekitar 150
+karakter). Pilih salah satu:
+
+1. **Kirim lewat DM**, kalau pengaturan DM mereka mengizinkan.
+2. **Balas dengan video:** rekam layar berisi 4 prompt, lalu pakai fitur
+   "Balas dengan video". Cara ini sekaligus jadi konten baru.
+3. **Postingan Photo Mode berisi 4 prompt** (rencana Rabu), lalu pin di profil.
+   Balas komentar: "Udah aku pin di profil ya 📌".
 
 ```
 Ini 4 prompt-nya. Ganti yang di [kurung] 👇
